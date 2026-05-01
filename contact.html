@@ -26,29 +26,58 @@
         <h1>Contact Us</h1>
         <p>Ready to start your home transformation? Contact Jonathan Manzi at 518-847-1773 or fill out the form below, and we'll get back to you shortly to schedule a free estimate.</p>
         
-        <form action="#" method="post">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <div class="contact-container">
+            <form action="YOUR_GOOGLE_FORM_URL_HERE" method="post" target="hidden_iframe" class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="entry.YOUR_ENTRY_ID_NAME" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="entry.YOUR_ENTRY_ID_PHONE" placeholder="(518) 000-0000" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="entry.YOUR_ENTRY_ID_EMAIL" placeholder="email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="entry.YOUR_ENTRY_ID_CITY" placeholder="e.g. Albany" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Project Type</label>
+                    <select id="service" name="entry.YOUR_ENTRY_ID_SERVICE">
+                        <option value="Kitchen Remodeling">Kitchen Remodeling</option>
+                        <option value="Bathroom Remodeling">Bathroom Remodeling</option>
+                        <option value="Custom Tile Work">Custom Tile Work</option>
+                        <option value="Other">Other / Full Home Remodel</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Project Description</label>
+                    <textarea id="message" name="entry.YOUR_ENTRY_ID_DESC" rows="6" placeholder="Tell us a little bit about what you're looking to do..."></textarea>
+                </div>
+
+                <button type="submit" class="btn submit-btn">Get Your Free Estimate</button>
+            </form>
             
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Email@example.com" required>
+            <!-- Hidden iframe for Silent Bridge submission -->
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){document.getElementById('contactForm').reset(); alert('Thank you! Your estimate request has been sent.');}"></iframe>
             
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="(518) 000-0000">
-            
-            <label for="service">Service Interested In</label>
-            <select id="service" name="service">
-                <option value="kitchen">Kitchen Remodeling</option>
-                <option value="bathroom">Bathroom Remodeling</option>
-                <option value="tile">Custom Tile Work</option>
-                <option value="full">Full Home Remodel</option>
-            </select>
-            
-            <label for="message">Tell us about your project</label>
-            <textarea id="message" name="message" rows="5" placeholder="Describe your vision..."></textarea>
-            
-            <button type="submit" class="btn">Send Request</button>
-        </form>
+            <script>
+                var submitted = false;
+                document.getElementById('contactForm').addEventListener('submit', function() {
+                    submitted = true;
+                });
+            </script>
+        </div>
     </main>
     
     <footer>
