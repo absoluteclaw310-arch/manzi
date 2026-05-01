@@ -25,6 +25,9 @@ header {
     background: #2c3e50;
     color: #fff;
     padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav {
@@ -34,6 +37,16 @@ nav {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
+}
+
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
 }
 
 .logo {
@@ -43,12 +56,29 @@ nav {
     text-transform: uppercase;
 }
 
+.nav-links {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background: #2c3e50;
+    padding: 1rem;
+    margin: 1rem 0 0 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    gap: 15px;
+    min-width: 200px;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
 nav ul {
     list-style: none;
-    display: flex;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
+    display: none; /* overrides old display: flex if nav-links class is missing, but .nav-links handles it */
 }
 
 nav ul li a {
