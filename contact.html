@@ -24,38 +24,30 @@
     </header>
     <main>
         <h1>Contact Us</h1>
-        <p>Ready to start your project? Send us a message and we'll get back to you shortly.</p>
-        <form action="#" method="POST" class="contact-form">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="project-type">Project Type:</label>
-                <select id="project-type" name="project-type">
-                    <option value="kitchen">Kitchen Remodeling</option>
-                    <option value="bathroom">Bathroom Remodeling</option>
-                    <option value="tile">Custom Tile Work</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="city">City:</label>
-                <input type="text" id="city" name="city" required>
-            </div>
-            <div class="form-group">
-                <label for="description">Project Description:</label>
-                <textarea id="description" name="description" rows="5"></textarea>
-            </div>
-            <button type="submit" class="btn">Send Message</button>
+        <p>Ready to start your home transformation? Fill out the form below, and we'll get back to you shortly to schedule a free estimate.</p>
+        
+        <form action="#" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Email@example.com" required>
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(518) 000-0000">
+            
+            <label for="service">Service Interested In</label>
+            <select id="service" name="service">
+                <option value="kitchen">Kitchen Remodeling</option>
+                <option value="bathroom">Bathroom Remodeling</option>
+                <option value="tile">Custom Tile Work</option>
+                <option value="full">Full Home Remodel</option>
+            </select>
+            
+            <label for="message">Tell us about your project</label>
+            <textarea id="message" name="message" rows="5" placeholder="Describe your vision..."></textarea>
+            
+            <button type="submit" class="btn">Send Request</button>
         </form>
     </main>
     <footer>
