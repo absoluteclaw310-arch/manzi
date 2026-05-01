@@ -39,7 +39,7 @@ nav {
 .logo {
     font-family: 'Moderne', sans-serif;
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: normal;
     text-transform: uppercase;
 }
 
@@ -78,6 +78,7 @@ main {
 
 .hero h1 {
     font-family: 'Moderne', sans-serif;
+    font-weight: normal;
     font-size: 2.5rem;
     color: #2c3e50;
     margin-bottom: 1rem;
@@ -112,8 +113,15 @@ main {
 
 h1 {
     font-family: 'Moderne', sans-serif;
+    font-weight: normal;
     color: #2c3e50;
     text-transform: uppercase;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Moderne', sans-serif;
+    font-weight: normal;
+    color: #2c3e50;
 }
 
 footer {
